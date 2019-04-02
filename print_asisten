@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include "load.h"
+
+void print_strip(int x);
+int main()
+//void print_asisten(Schedule xx)
+{
+     int i; int j;  int k; int x;
+     Schedule jadwal;
+     
+
+    printf("|-------------------------------------------------------------------------------|\n");
+    printf("|   Ruang Praktikum          | LAB1       | LAB2       | LAB3       | LSS       |\n");
+    printf("|   Minggu   |     Hari      |------------|------------|------------|-----------|\n");
+    printf("|------------|-------------- |------------|------------|------------|-----------|\n");
+
+    for(i =3; i<=15; i++)
+    {
+        jadwal.numberofweek[i] =i;
+        for(j=1; j<=5; j++)
+        {
+            printf("|------%d-----|", jadwal.numberofweek[i]);
+            if(j==1)
+            {
+                jadwal.week[i].day[i].namahari = calloc(6, sizeof(char));
+                jadwal.week[i].day[j].namahari = "senin";
+                printf("-------%s", jadwal.week[i].day[j].namahari);
+                strlen(jadwal.week[i].day[j].namahari);
+                print_strip(strlen(jadwal.week[i].day[j].namahari));
+
+            }
+            else if(j==2)
+            {
+                jadwal.week[i].day[i].namahari = calloc(7, sizeof(char));
+                jadwal.week[i].day[j].namahari = "selasa";
+                 printf("-------%s", jadwal.week[i].day[j].namahari);
+                strlen(jadwal.week[i].day[j].namahari);
+                print_strip(strlen(jadwal.week[i].day[j].namahari));
+            }
+            else if(j==3)
+            {
+                jadwal.week[i].day[i].namahari = calloc(5, sizeof(char));
+                jadwal.week[i].day[j].namahari = "Rabu";
+                 printf("-------%s", jadwal.week[i].day[j].namahari);
+                 strlen(jadwal.week[i].day[j].namahari);
+                print_strip(strlen(jadwal.week[i].day[j].namahari));
+            }
+            else if(j==4)
+            {
+                jadwal.week[i].day[i].namahari = calloc(6, sizeof(char));
+                jadwal.week[i].day[j].namahari = "kamis";
+                 printf("-------%s", jadwal.week[i].day[j].namahari);
+                 strlen(jadwal.week[i].day[j].namahari);
+                print_strip(strlen(jadwal.week[i].day[j].namahari));
+            }
+            else if(j==5)
+            {
+                jadwal.week[i].day[i].namahari = calloc(6, sizeof(char));
+                jadwal.week[i].day[j].namahari = "jumat";
+                printf("-------%s", jadwal.week[i].day[j].namahari);
+                strlen(jadwal.week[i].day[j].namahari);
+                print_strip(strlen(jadwal.week[i].day[j].namahari));
+            }
+            printf("|------------"); //array asisten yang mengacu pada lab1, tinjauannya lab 1
+            printf("|------------"); //array asisten yang mengacu pada lab2
+            printf("|------------"); //array asisten yang mengacu pada lab3
+            printf("|------------|"); //array asisten yang mengacu pada LSS
+            printf("\n");
+        }
+        printf("\n");
+        
+    }
+   
+}
+
+void print_strip(int x)                                              //x adalah panjang string
+{
+    int i;                                                            
+
+    for(i=1; i<=(7-x); i++)
+    {
+        printf("-");
+    }
+    printf(" ");
+}
+
