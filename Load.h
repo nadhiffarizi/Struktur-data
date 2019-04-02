@@ -1,6 +1,7 @@
 #ifndef Load_H
 #define Load_H
 #include <stdio.h>
+#include <stdlib.h>
 #include <string.h>
 
 typedef struct group {
@@ -21,6 +22,7 @@ typedef struct lab {
 }Lab;
 typedef struct day {
     Lab lab [3];
+    char *namahari; //nama hari seperti senin, selasa dll, assign pake calloc dst
 }Day;
 
 typedef struct week_t {
@@ -28,7 +30,7 @@ typedef struct week_t {
 } Week;
 
 typedef struct schedule_t {
-    Week week [12];
+    Week week [16];  //kalo di print_asisten nambahin jadi size array 16 dimulai dari 3, makanya 16, sabi kalo diganti lagi
 } Schedule;
 
 typedef struct temp_t {
