@@ -21,6 +21,7 @@ typedef struct lab {
 }Lab;
 typedef struct day {
     Lab lab [3];
+    char *namahari;
 }Day;
 
 typedef struct week_t {
