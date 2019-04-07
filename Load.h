@@ -49,8 +49,6 @@ void loadJadwal(char * filename, Schedule * jadwal);
 void loadStatus( char * filename, Schedule * jadwal);
 void saveJadwal(char const * filename , Schedule jadwal);
 void saveStatus(char const * filename , Schedule jadwal);
-void printSchedule(Schedule jadwal);
-void printStatus(Schedule jadwal);
 void FprintSchedule(Schedule jadwal, FILE *file);
 void FprintStatus(Schedule jadwal, FILE *file);
 char* copyStr(int a, int b,char const * string);
